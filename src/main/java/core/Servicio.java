@@ -1,12 +1,17 @@
 package core;
 
+import domain.*;
+import io.*;
+import factory.*;
+import core.*;
+
 import java.util.*;
-import io.IOException;
+import java.io.IOException;
 
 
 public class Servicio{
 
-    public List<Figura> cargar(String ruta) IOException{
+    public List<Figura> cargar(String ruta) throws IOException{
         
         LectorJson lector = new LectorJson();
         FiguraFactory fabrica = new FiguraFactory();

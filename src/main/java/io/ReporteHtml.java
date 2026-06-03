@@ -1,14 +1,14 @@
 package io;
 
-import dominio.Figura;
+import domain.*;
 
 import java.util.*;
-import io.IOException;
-import nio.file.*;
+import java.io.IOException;
+import java.nio.file.*;
 
 public class ReporteHtml{
 
-    public void generar(String archivo, List<Figura> figuras) IOException{
+    public void generar(String archivo, List<Figura> figuras) throws IOException{
         StringBuilder html = new StringBuilder();
         html.append("<html><head><meta charset=\"UTF-8\">")
             .append("<title>Reporte</title></head>")
@@ -18,10 +18,13 @@ public class ReporteHtml{
             .append("<tr><th>Tipo</th><th>Area</th><th>Perimetro</th></tr>");
         
         for (Figura figura: figuras){
+            if (figura == null ) continue;
+            
             html.append("<tr>")
                 .append("<td>").append(figura.tipo()).append("</td>")
                 .append("<td>").append(figura.area()).append("</td>")
                 .append("<td>").append(figura.perimetro()).append("</td>")
+                .append("</tr>");
         }
 
         html.append("</table></body></html>");

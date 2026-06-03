@@ -1,14 +1,16 @@
-package dominio;
+package domain;
+
+import domain.*;
 
 public class Cuadrado implements Figura{
-    puble double lado;
+    public double lado;
 
     public Cuadrado(double lado){
         this.lado = lado;
     }
 
     public String tipo(){
-        return "Cuadrado";
+        return "cuadrado";
     }
 
     public double area(){

@@ -1,13 +1,15 @@
 package io;
 
-import com.fasterxml.jackson.*;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.*;
 import java.util.*;
 
 public class LectorJson{
     ObjectMapper mapp = new ObjectMapper();
 
-    public List<Mapp<String, Object>> leer(String json) IOException {
+    public List<Map<String, Object>> leer(String json) throws IOException {
         return mapp.readValue(
             new File(json),
             new TypeReference<>(){}

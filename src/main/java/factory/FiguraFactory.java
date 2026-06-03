@@ -11,7 +11,7 @@ public class FiguraFactory{
         String tipo = (String) datos.get("tipo");
 
         switch(tipo){
-            case "Cuadrado" :
+            case "cuadrado" :
                 return new Cuadrado(
                     toDouble(datos.get("lado"))
                 );
@@ -21,6 +21,6 @@ public class FiguraFactory{
     }
 
     public double toDouble(Object valor){
-        return (Number valor).doubleValue();
+        return ((Number) valor).doubleValue();
     }
 }

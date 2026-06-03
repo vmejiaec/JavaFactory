@@ -1,0 +1,8 @@
+app/Main.class
+factory/FiguraFactory.class
+domain/Cuadrado.class
+io/LectorJson$1.class
+io/ReporteHtml.class
+core/Servicio.class
+io/LectorJson.class
+domain/Figura.class
